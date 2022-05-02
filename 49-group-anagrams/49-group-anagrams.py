@@ -5,17 +5,12 @@ class Solution:
         for i,value in enumerate(strs):
             temp = ''.join(sorted(value))
             if temp in dic:
-                dic[temp].append(i)
+                dic[temp].append(value)
             else:
-                dic[temp] = [i]
+                dic[temp] = [value]
         final = []
         for i in dic:
-            temp = dic[i]
-            temp2 = []
-            for j in temp:
-                temp2.append(strs[j])
-            final.append(temp2)
-        #print(final)
+            final.append(dic[i])
         return final
             
                 
