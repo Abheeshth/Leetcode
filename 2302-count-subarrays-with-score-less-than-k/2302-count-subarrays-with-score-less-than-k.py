@@ -1,3 +1,5 @@
+#binary search
+
 class Solution:
     def countSubarrays(self, nums: List[int], k: int) -> int:
         prefix_sum = [0]
@@ -22,3 +24,20 @@ class Solution:
             
             ans += max(0, lo - i - 1) # total subarrays starting with i and ending before j
         return ans
+    
+# Sliding window
+''' 
+def countSubarrays(self, A, k):
+        res = cur = i = 0
+        for j in range(len(A)):
+            cur += A[j]
+            while cur * (j - i + 1) >= k:
+                cur -= A[i]
+                i += 1
+            res += j - i + 1
+        return res
+'''
+
+
+    
+    
