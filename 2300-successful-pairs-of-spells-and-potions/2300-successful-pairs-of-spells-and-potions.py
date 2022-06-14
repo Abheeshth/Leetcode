@@ -1,7 +1,7 @@
 class Solution:
     def successfulPairs(self, spells: List[int], potions: List[int], success: int) -> List[int]:
         # let sort th postions first
-        # then we'll do the binary search in spells
+        # then we'll do the binary search in potions
         
         potions.sort()
         l = len(potions)
