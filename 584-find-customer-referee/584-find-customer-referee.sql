@@ -1,9 +1,3 @@
 # Write your MySQL query statement below
-SELECT name
-FROM Customer
-WHERE id NOT IN
-(
-SELECT id
-FROM Customer
-WHERE referee_id = 2
-)
+select name from customer
+where referee_id is Null or referee_id != 2 
